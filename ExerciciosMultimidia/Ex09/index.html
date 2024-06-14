@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Opinião sobre o Filme</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        th,
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pesquisa de Opinião sobre o Filme</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Opinião</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ótimo</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bom</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Regular</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Ruim</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <form id="surveyForm">
+        <p>
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" id="idade" required>
+        </p>
+        <p>
+            <label for="opiniao">Qual sua opinião sobre o filme?</label>
+            <select id="opiniao" required>
+                <option value="1">Ótimo</option>
+                <option value="2">Bom</option>
+                <option value="3">Regular</option>
+                <option value="4">Ruim</option>
+            </select>
+            <br>
+            <button type="submit">Enviar Resposta</button>
+        </p>
+
+
+    </form>
+    <button onclick="finalizarPesquisa()">Finalizar Pesquisa</button>
+
+    <h2>Resultados:</h2>
+    <p id="quantidadePessoas">Quantidade de pessoas que respondeu a pesquisa: 0</p>
+    <p id="mediaIdade">Média de idade das pessoas que responderam a pesquisa: 0</p>
+    <p id="percentualOtimo">Percentual de respostas Ótimo: 0%</p>
+    <p id="percentualBom">Percentual de respostas Bom: 0%</p>
+    <p id="percentualRegular">Percentual de respostas Regular: 0%</p>
+    <p id="percentualRuim">Percentual de respostas Ruim: 0%</p>
+
+    <script src="js/Ex09.js"></script>
+</body>
+
+</html>
